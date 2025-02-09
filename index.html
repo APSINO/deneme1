@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ürün Detay Sayfası</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      padding-top: 60px;
+      background-color: #f8f9fa;
+    }
+    .product-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .price {
+      font-size: 1.8rem;
+      color: #e74c3c;
+      font-weight: bold;
+    }
+    .product-details {
+      margin-top: 30px;
+    }
+    .nav-tabs .nav-link.active {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Ürün Bilgileri Bölümü -->
+    <div class="row">
+      <!-- Ürün Resmi -->
+      <div class="col-md-6">
+        <img
+          src="urun-resmi.jpg"
+          alt="Ürün Resmi"
+          class="product-image img-fluid shadow-sm"
+        />
+      </div>
+      <!-- Ürün Detayları -->
+      <div class="col-md-6">
+        <h1 class="mt-3">Ürün Adı</h1>
+        <p class="price">₺ 999,99</p>
+        <p>
+          Bu alanda ürünün kısa açıklaması yer alır. Ürünün temel özellikleri ve
+          kullanım avantajlarından bahsedebilirsiniz.
+        </p>
+        <button class="btn btn-primary btn-lg">Satın Al</button>
+      </div>
+    </div>
+
+    <!-- Ürün Hakkında Detaylar -->
+    <div class="row product-details">
+      <div class="col-12">
+        <ul class="nav nav-tabs" id="productTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="description-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#description"
+              type="button"
+              role="tab"
+              aria-controls="description"
+              aria-selected="true"
+            >
+              Açıklama
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="features-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#features"
+              type="button"
+              role="tab"
+              aria-controls="features"
+              aria-selected="false"
+            >
+              Özellikler
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="reviews-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#reviews"
+              type="button"
+              role="tab"
+              aria-controls="reviews"
+              aria-selected="false"
+            >
+              Yorumlar
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content p-3 border border-top-0" id="productTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="description"
+            role="tabpanel"
+            aria-labelledby="description-tab"
+          >
+            <p>Ürün açıklaması detaylı olarak burada yer alır.</p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="features"
+            role="tabpanel"
+            aria-labelledby="features-tab"
+          >
+            <ul>
+              <li>Özellik 1</li>
+              <li>Özellik 2</li>
+              <li>Özellik 3</li>
+            </ul>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="reviews"
+            role="tabpanel"
+            aria-labelledby="reviews-tab"
+          >
+            <p>Kullanıcı yorumları burada görüntülenecek.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (Popper dahil) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
